@@ -16,11 +16,16 @@ body {
   margin: 0px;
   height: 100%;
   width: 100%;
-  background-color: lightgray;
+  /* background: linear-gradient(45deg, skyblue, lightblue); */
+  /* background-position: center; */
+  background-color: #ececec;
 }
 
 nav {
-  background-color: aliceblue;
+  background-color: #ececec;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 ul {
@@ -32,11 +37,25 @@ ul {
 
 li {
   padding: 10px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 a {
   text-decoration: none;
+}
+
+a:link {
+  color: darkred;
+}
+
+a:hover {
+  color: tomato;
+}
+
+a:active {
+  transform: translateY(-3px);
+  transition: 0.3s;
+  transition-timing-function: ease-out;
 }
 
 header {
@@ -138,7 +157,7 @@ h1 {
 
 .photo-holder > img:hover {
   transform: scale(1.1);
-  transition: 0.4s;
+  transition: 0.3s;
   transition-timing-function: ease-out;
 }
 
@@ -171,8 +190,12 @@ form {
   display: flex;
   flex-direction: column;
 }
+label {
+  display: inline;
+}
 input {
   margin-bottom: 1rem;
+  display: inline;
 }
 
 .contact-details {
