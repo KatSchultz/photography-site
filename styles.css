@@ -36,7 +36,7 @@ ul {
   display: flex;
   justify-content: space-around;
 
-  box-shadow: 0px 0px 20px #303442;
+  box-shadow: 0px 0px 10px #303442;
 }
 
 li {
@@ -83,23 +83,16 @@ a:active {
 header {
   height: 70vh;
   background-image: url(./images/oblique.jpg);
-
-  /* transform: translate(-50%, -50%); */
   background-size: cover;
   background-position: center center;
   background-size: cover;
-  /* background-attachment: fixed; */
-  /* position: relative; */
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
 h1 {
   position: absolute;
   text-align: center;
-  /* margin-top: 20%; */
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -112,7 +105,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .hidden {
@@ -168,7 +161,7 @@ h1 {
   width: 100%;
   display: grid;
   gap: 2rem 2rem;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   justify-items: center;
 }
 
@@ -251,15 +244,34 @@ input {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
+  .photo-holder {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem 2rem;
+    grid-template-columns: auto auto;
+    justify-items: center;
+  }
+
+  #photography {
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  .photos {
+    margin: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
   .photo-holder {
     margin-top: 3rem;
-    width: 100%;
     display: grid;
     gap: 3rem 3rem 3rem;
     grid-template-columns: auto auto auto;
     justify-items: center;
   }
+
   .modal-img {
     max-width: 60vw;
   }
