@@ -195,7 +195,7 @@ h1 {
 }
 
 .contact {
-  min-height: 60vh;
+  /* min-height: 60vh; */
   background-color: white;
   margin: 2rem;
   display: flex;
@@ -207,12 +207,15 @@ h2 {
   text-align: center;
 }
 
-.contact-contents {
-  margin-top: 2rem;
+.contact-details {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.name {
+  margin: 1rem;
 }
 
 form > h3 {
@@ -240,7 +243,6 @@ input {
 }
 
 .contact-details {
-  margin-top: 2rem;
   text-align: center;
 }
 
@@ -279,9 +281,14 @@ input {
     flex-direction: row;
     gap: 2rem;
   }
-
-  .pre-edit,
+  ` 1 .pre-edit,
   .post-edit {
     width: 100%;
+  }
+
+  .contact-specs {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
   }
 }
