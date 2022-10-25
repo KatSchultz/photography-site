@@ -281,7 +281,7 @@ input {
     flex-direction: row;
     gap: 2rem;
   }
-  ` 1 .pre-edit,
+  .pre-edit,
   .post-edit {
     width: 100%;
   }
