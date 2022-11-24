@@ -150,6 +150,22 @@ h1 {
   background-color: #303442;
 }
 
+.arrow {
+  position: absolute;
+  top: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.arrow-forward {
+  right: 2rem;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.5s ease;
+}
+
 #photography {
   background-color: white;
   margin: 2rem;
