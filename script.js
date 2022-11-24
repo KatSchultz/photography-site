@@ -23,33 +23,44 @@ let slides = [
   "./images/10.jpg",
   "./images/11.jpg",
 ];
-let slideIndex;
 
 function exitModal() {
   modal.classList.add("hidden");
 }
 function nextImage() {
+  let index = findIndex();
+  index++;
+
+  if (index >= slides.length) {
+    index = 0;
+  }
+
+  modalImg.innerHTML = `<img src=${slides[index]} class="modal-img" />`;
+}
+
+function prevImage() {
+  let index = findIndex();
+  index--;
+
+  if (index < 0) {
+    index = slides.length - 1;
+  }
+  modalImg.innerHTML = `<img src=${slides[index]} class="modal-img" />`;
+}
+function findIndex() {
   let index;
   if (modalImg.innerHTML.length === 44) {
     index = modalImg.innerHTML.slice(19, 20);
   } else {
     index = modalImg.innerHTML.slice(19, 21);
   }
-  index++;
-
-  if (index >= slides.length) {
-    index = 0;
-  }
-  console.log(index);
-  modalImg.innerHTML = `<img src=${slides[index]} class="modal-img" />`;
+  return index;
 }
 
 images.forEach((element, index) => {
   element.addEventListener("click", () => {
     modal.classList.remove("hidden");
     modalImg.innerHTML = `<img src=${slides[index]} class="modal-img" />`;
-    slideIndex = index;
-    console.log(slideIndex);
   });
 });
 
@@ -63,4 +74,8 @@ exitBtn.addEventListener("click", () => {
 
 arrowNext.addEventListener("click", () => {
   nextImage();
+});
+
+arrowPrev.addEventListener("click", () => {
+  prevImage();
 });
