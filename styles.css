@@ -101,6 +101,10 @@ h1 {
   text-shadow: 0px 0px 0.5rem black;
 }
 
+p {
+  opacity: 0.8;
+}
+
 .photos {
   display: flex;
   flex-direction: column;
@@ -188,15 +192,24 @@ h1 {
 .editing {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: white;
   margin: 2rem;
   padding: 2rem;
 }
 
+.editing p {
+  margin-bottom: 0.4rem;
+}
+
 .edit-photos {
   width: 100%;
   margin-top: 2rem;
+}
+
+.edit-photos-text {
+  text-align: center;
 }
 
 .edit-photos-container {
@@ -210,7 +223,7 @@ h1 {
   transition-timing-function: ease-out;
 }
 
-.contact {
+.about {
   /* min-height: 60vh; */
   background-color: white;
   margin: 2rem;
@@ -221,9 +234,12 @@ h1 {
 }
 h2 {
   text-align: center;
+  margin-bottom: 16px;
+}
+.about h2 {
 }
 
-.contact-details {
+.about-details {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -231,7 +247,7 @@ h2 {
 }
 
 .name {
-  margin: 1rem;
+  margin: 1rem 0 0.4rem;
 }
 
 form > h3 {
@@ -258,8 +274,10 @@ input {
   border-radius: 1rem;
 }
 
-.contact-details {
+.about-details {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 600px) {
@@ -302,9 +320,10 @@ input {
     width: 100%;
   }
 
-  .contact-specs {
+  .about-specs {
     width: 80%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
   }
 }
